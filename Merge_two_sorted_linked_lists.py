@@ -11,17 +11,17 @@ def appendList(lList, head):
 
 
 def mergeLists(head1, head2):
-    merget_list = SinglyLinkedList();
+    merged_list = SinglyLinkedList();
     l1 = head1;
     l2 = head2;
     while 1:
         if l1 is None and l2 is None:
             break;
         elif l1 is None:
-            merget_list = appendList(merget_list, l2);
+            merged_list = appendList(merged_list, l2);
             break;
         elif l2 is None:
-            merget_list = appendList(merget_list, l1);
+            merged_list = appendList(merged_list, l1);
             break;
         elif l1.data < l2.data:
             next_data = l1.data;
@@ -33,7 +33,7 @@ def mergeLists(head1, head2):
             next_data = l1.data;
             l1 = l1.next;
         
-        merget_list.insert_node(next_data)
+        merged_list.insert_node(next_data)
 
-    return merget_list.head;
+    return merged_list.head;
     
